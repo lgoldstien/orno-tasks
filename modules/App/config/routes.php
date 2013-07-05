@@ -28,6 +28,9 @@ return [
      * -------------------------------------------------------------------------
      */
     '/' => 'App\Controller\Home::index',
+    '/api/task' => [
+        'restful' => 'App\Controller\Task'
+    ],
 
 
     /**
