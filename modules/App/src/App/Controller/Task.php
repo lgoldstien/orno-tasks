@@ -14,6 +14,7 @@ class Task
         $this->view = $view;
     }
 
+    // Level 1 restful actions
     public function getAll() {
         $tasks = [
             [
@@ -24,7 +25,14 @@ class Task
                 'date_due' => '07/08/2013'
             ]
         ];
-        $this->view->__set('tasks', $tasks);
+        $this->view['tasks'] = $tasks;
         $this->view->render();
     }
+    public function create() { }
+    public function options() { }
+
+    // Level 2 restful actions
+    public function get($taskid) { }
+    public function update($taskid) { }
+    public function delete($taskid) { }
 }
