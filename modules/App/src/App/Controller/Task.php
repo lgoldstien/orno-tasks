@@ -26,7 +26,7 @@ class Task
             ]
         ];
         $this->view['tasks'] = $tasks;
-        $this->view->render();
+        return $this->view->render();
     }
     public function create() { }
     public function options() { }
