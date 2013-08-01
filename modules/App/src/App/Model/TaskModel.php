@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use Orno\Db\Driver\Pdo;
+use Orno\Db\Driver\PdoSqlite;
 use Orno\Db\Query;
 
 class TaskModel
@@ -14,11 +14,9 @@ class TaskModel
 
     public function __construct(){
         $config = [
-            'database' => 'mysql:dbname=tasks;host=localhost;charset=utf8',
-            'username' => 'root',
-            'password' => 'bILLIe50-'
+            'database' => 'sqlite:/Users/lgold/Projects/orno-tasks/data/db.sq3',
         ];
-        $this->driver = new Pdo($config);
+        $this->driver = new PdoSqlite($config);
         $this->query = new Query($this->driver);
     }
 
