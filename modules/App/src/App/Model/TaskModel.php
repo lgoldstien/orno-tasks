@@ -2,7 +2,7 @@
 
 namespace App\Model;
 
-use Orno\Db\Driver\PdoSqlite;
+use Orno\Db\Driver\Pdo;
 use Orno\Db\Query;
 
 class TaskModel
@@ -16,7 +16,7 @@ class TaskModel
         $config = [
             'database' => 'sqlite:/Users/lgold/Projects/orno-tasks/data/db.sq3',
         ];
-        $this->driver = new PdoSqlite($config);
+        $this->driver = new Pdo($config);
         $this->query = new Query($this->driver);
     }
 
