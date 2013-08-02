@@ -24,5 +24,15 @@ return [
                 __DIR__ . '/../views'
             ]
         ]
+    ],
+    'Orno\Db\Query' => [
+        'arguments' => ['Orno\Db\Driver\Pdo']
+    ],
+    'Orno\Db\Driver\Pdo' => [
+        'arguments' => [
+            [
+                'database' => 'sqlite:/Users/lgold/Projects/orno-tasks/data/db.sq3'
+            ]
+        ]
     ]
 ];
