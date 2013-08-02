@@ -3,9 +3,11 @@
 namespace App\Controller;
 
 use Orno\Mvc\View\JsonRenderer;
+use Orno\Mvc\Controller\RestfulControllerInterface;
 use App\Model\TaskModel;
 
-class Task
+
+class Task implements RestfulControllerInterface
 {
     protected $view;
     protected $taskid;
@@ -29,14 +31,13 @@ class Task
     public function options() { }
 
     // Level 2 restful actions
-    public function get($taskid) 
+    public function get($id) 
     { 
-        $this->taskid = $taskid;
-        $this->taskModel->get($taskid);
+        $this->taskid = $id;
+        $this->taskModel->get($this->taskid);
         $this->view['tasks'] = $this->taskModel->result;
-        // print_r($this->taskModel);
         return $this->view->render();
     }
-    public function update($taskid) { }
-    public function delete($taskid) { }
+    public function update($id) { }
+    public function delete($id) { }
 }

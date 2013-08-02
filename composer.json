@@ -4,7 +4,7 @@
         "orno/di": "1.*",
         "orno/mvc": "dev-master",
         "orno/loader": "1.*",
-        "orno/db": "1.*",
+        "orno/db": "dev-master",
         "orno/http": "1.*"
     }
 }
