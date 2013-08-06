@@ -45,7 +45,9 @@ class Task implements RestfulControllerInterface
         );
         
         $this->view['task'] = $this->taskModel->result;
-        return $this->view->render();
+        $response = $this->view->render();
+        $response->setStatusCode(201);
+        return $response;
     }
     public function options() { }
 
