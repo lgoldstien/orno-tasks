@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use Orno\Mvc\View\JsonRenderer;
+use Orno\Http\Request;
 use Orno\Mvc\Controller\RestfulControllerInterface;
 use App\Model\TaskModel;
 
@@ -13,9 +14,10 @@ class Task implements RestfulControllerInterface
     protected $taskid;
     protected $taskModel;
 
-    public function __construct(JsonRenderer $view, TaskModel $task)
+    public function __construct(JsonRenderer $view, TaskModel $task, Request $request)
     {
         $this->view = $view;
+        $this->request = $request;
         $this->taskModel = $task;
     }
 
@@ -26,7 +28,15 @@ class Task implements RestfulControllerInterface
         $this->view['tasks'] = $this->taskModel->result;
         return $this->view->render();
     }
-    public function create() { }
+    public function create() {
+        $postData = [];
+        parse_str($this->request->getContent(), $postData);
+
+        $postData['date_due'] = date("Y-m-d H:i:s",strtotime($postData['date_due']));
+        
+        $this->taskModel->create( $postData['title'], $postData['content'], $postData['date_due'], $postData['priority'] );
+        
+    }
     public function options() { }
 
     // Level 2 restful actions

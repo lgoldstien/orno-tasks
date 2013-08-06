@@ -25,6 +25,8 @@ return [
             ]
         ]
     ],
+    'Orno\Http\Request' => [
+    ],
     'Orno\Db\Query' => [
         'arguments' => ['Orno\Db\Driver\Pdo']
     ],
