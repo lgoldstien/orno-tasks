@@ -16,9 +16,7 @@ class TaskModel
 
     public function getAll() {
         $this->query->prepare("select * from tasks")->execute();
-        while ( $row = $this->query->fetch() ) {
-            $this->result[] = $row;
-        }
+        $this->result = $this->query->fetchAll();
     }
 
     public function create($title, $content, $date_due, $priority) {
