@@ -27,8 +27,7 @@ class TaskModel
              ->bind(":date_due", $date_due)
              ->bind(":priority", $priority);
         $this->query->execute();
-
-        var_dump($this->query);
+        $this->result = $this->query->getDriver()->lastInsertId();
     }
 
     public function get($id) {

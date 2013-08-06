@@ -31,11 +31,21 @@ class Task implements RestfulControllerInterface
     public function create() {
         $postData = [];
         parse_str($this->request->getContent(), $postData);
-
-        $postData['date_due'] = date("Y-m-d H:i:s",strtotime($postData['date_due']));
         
-        $this->taskModel->create( $postData['title'], $postData['content'], $postData['date_due'], $postData['priority'] );
+        $postData['date_due'] = date(
+            "Y-m-d H:i:s",
+            strtotime($postData['date_due'])
+        );
         
+        $this->taskModel->create( 
+            $postData['title'],
+            $postData['content'],
+            $postData['date_due'],
+            $postData['priority']
+        );
+        
+        $this->view['task'] = $this->taskModel->result;
+        return $this->view->render();
     }
     public function options() { }
 
