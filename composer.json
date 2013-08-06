@@ -1,4 +1,16 @@
 {
+    "name": "Tasks",
+    "description": "A task management application written using orno and backbone.",
+    "keywords": ["orno", "backbone", "tasks"],
+    "require": {
+        "php": ">=5.4"
+    },
+    "authors": [
+        {
+            "name": "Lawrence Goldstien",
+            "email": "lgoldstien@onmylemon.co.uk"
+        }
+    ],
     "require": {
         "php": ">=5.4",
         "orno/di": "1.*",
