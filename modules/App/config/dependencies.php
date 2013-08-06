@@ -33,7 +33,7 @@ return [
     'Orno\Db\Driver\Pdo' => [
         'arguments' => [
             [
-                'database' => 'sqlite:/Users/lgold/Projects/orno-tasks/data/db.sq3'
+                'database' => 'sqlite:../data/db.sq3'
             ]
         ]
     ]
