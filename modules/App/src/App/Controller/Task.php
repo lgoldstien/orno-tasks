@@ -43,5 +43,12 @@ class Task implements RestfulControllerInterface
         return $response;
     }
     public function update($id) { }
-    public function delete($id) { }
+    public function delete($id) { 
+        $this->taskid = $id;
+        $this->taskModel->get($this->taskid);
+        $this->view['tasks'] = $this->taskModel->result;
+
+        $response = $this->view->render();
+        return $response;
+    }
 }

@@ -28,4 +28,12 @@ class TaskModel
              ->execute();
         $this->result = $this->query->fetch();
     }
+
+    public function delete($id) { 
+        $sql = "delete from tasks where id = :id";
+        $this->query->prepare($sql)
+             ->bind(":id", $id)
+             ->execute();
+        $this->result = $this->query->fetch();
+    }
 }
