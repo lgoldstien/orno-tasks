@@ -16,8 +16,9 @@ class TaskModel
 
     public function getAll() {
         $this->query->prepare("select * from tasks")->execute();
-        var_dump($this->query);
-        $this->result = $this->query->fetch();
+        while ( $row = $this->query->fetch() ) {
+            $this->result[] = $row;
+        }
     }
 
     public function get($id) {

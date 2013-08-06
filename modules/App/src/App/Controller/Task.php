@@ -17,7 +17,6 @@ class Task implements RestfulControllerInterface
     {
         $this->view = $view;
         $this->taskModel = $task;
-        
     }
 
     // Level 1 restful actions
@@ -36,7 +35,12 @@ class Task implements RestfulControllerInterface
         $this->taskid = $id;
         $this->taskModel->get($this->taskid);
         $this->view['tasks'] = $this->taskModel->result;
-        return $this->view->render();
+
+        $response = $this->view->render();
+        if ( $this->taskModel->result == false ) {
+            $response->setStatusCode(404);
+        }
+        return $response;
     }
     public function update($id) { }
     public function delete($id) { }
