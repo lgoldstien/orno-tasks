@@ -1,0 +1,69 @@
+// Base url
+@baseUrl: "../script/vendor/bootstrap/less/";
+
+// Core variables and mixins
+@import "@{baseUrl}variables";
+@import "@{baseUrl}mixins";
+
+// Reset
+@import "@{baseUrl}normalize";
+@import "@{baseUrl}print";
+
+// Core CSS
+@import "@{baseUrl}scaffolding";
+@import "@{baseUrl}type";
+@import "@{baseUrl}code";
+@import "@{baseUrl}grid";
+@import "@{baseUrl}tables";
+@import "@{baseUrl}forms";
+@import "@{baseUrl}buttons";
+
+// Components: common
+@import "@{baseUrl}component-animations";
+@import "@{baseUrl}dropdowns";
+@import "@{baseUrl}list-group";
+@import "@{baseUrl}panels";
+@import "@{baseUrl}wells";
+@import "@{baseUrl}close";
+
+// Navbar
+@import "@{baseUrl}navs";
+@import "@{baseUrl}navbar";
+
+// Utility classes
+@import "@{baseUrl}utilities"; // Has to be last to override when necessary
+@import "@{baseUrl}responsive-utilities";
+
+// Custom variables
+// Colours
+@app-c-primary:                    rgba(132,156,42,1);
+@app-c-secondary:                  rgba(245,189,35,1);
+@app-c-font:                       rgba(0,0,0,1);
+@app-c-highlight:                  rgba(255,247,225,1);
+@app-c-bg:                         rgba(255,255,255,1);
+
+// Borders
+@border-radius-base:               8px;
+
+// Navbar
+@navbar-height:                    50px;
+@navbar-color:                     @app-c-font;
+@navbar-bg:                        @app-c-primary;
+@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
+@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+
+// Navbar links
+@navbar-link-color:                @app-c-font;
+@navbar-link-hover-color:          #333;
+@navbar-link-hover-bg:             @app-c-highlight;
+@navbar-link-active-color:         #555;
+@navbar-link-active-bg:            @app-c-secondary;
+@navbar-link-disabled-color:       #ccc;
+@navbar-link-disabled-bg:          transparent;
+
+// Panels
+@panel-bg:                    @app-c-highlight;
+@panel-border:                #ddd;
+@panel-border-radius:         @border-radius-base;
+@panel-heading-bg:            @app-c-primary;
+@panel-footer-bg:             #f5f5f5;
