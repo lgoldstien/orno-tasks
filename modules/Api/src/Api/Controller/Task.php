@@ -1,11 +1,11 @@
 <?php 
 
-namespace App\Controller;
+namespace Api\Controller;
 
 use Orno\Mvc\View\JsonRenderer;
 use Orno\Http\Request;
 use Orno\Mvc\Controller\RestfulControllerInterface;
-use App\Model\TaskModel;
+use Api\Model\TaskModel;
 
 
 class Task implements RestfulControllerInterface

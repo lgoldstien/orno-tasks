@@ -12,5 +12,8 @@ return [
      */
     'App' => [
         'src' => __DIR__ . '/../modules/App/src'
+    ],
+    'Api' => [
+        'src' => __DIR__ . '/../modules/Api/src'
     ]
 ];
