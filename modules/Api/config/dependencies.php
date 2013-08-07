@@ -12,8 +12,6 @@ return [
      * and resolution speed will be improved greatly.
      * -------------------------------------------------------------------------
      */
-    'Orno\Mvc\View\Renderer' => [
-    ],
     'Orno\Http\Request' => [
     ],
     'Orno\Db\Query' => [
