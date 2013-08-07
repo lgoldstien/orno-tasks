@@ -24,17 +24,5 @@ return [
                 __DIR__ . '/../views'
             ]
         ]
-    ],
-    'Orno\Http\Request' => [
-    ],
-    'Orno\Db\Query' => [
-        'arguments' => ['Orno\Db\Driver\Pdo']
-    ],
-    'Orno\Db\Driver\Pdo' => [
-        'arguments' => [
-            [
-                'database' => 'sqlite:../data/db.sq3'
-            ]
-        ]
     ]
 ];
