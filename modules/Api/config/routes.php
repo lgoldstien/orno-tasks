@@ -2,15 +2,15 @@
 
 return [
     '/api/task' => [
-        'get' => 'App\Controller\Task::getAll',
-        'post' => 'App\Controller\Task::create',
-        'put' => 'App\Controller\Task::create',
-        'delete' => 'App\Controller\Task::noMethod'
+        'get' => 'Api\Controller\Task::getAll',
+        'post' => 'Api\Controller\Task::create',
+        'put' => 'Api\Controller\Task::create',
+        'delete' => 'Api\Controller\Task::noMethod'
     ],
     '/api/task/(id)' => [
-        'get' => 'App\Controller\Task::get',
-        'post' => 'App\Controller\Task::update',
-        'put' => 'App\Controller\Task::update',
-        'delete' => 'App\Controller\Task::delete'
+        'get' => 'Api\Controller\Task::get',
+        'post' => 'Api\Controller\Task::update',
+        'put' => 'Api\Controller\Task::update',
+        'delete' => 'Api\Controller\Task::delete'
     ]
 ];
