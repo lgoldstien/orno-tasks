@@ -2,4 +2,4 @@ composer.lock
 vendor/
 .sq*
 .DS_Store
-.sublime-*
+*.sublime-*
