@@ -73,4 +73,11 @@ class Task implements RestfulControllerInterface
         $response = $this->view->render();
         return $response;
     }
+
+    // Not available method
+    public function noMethod() {
+        $response = $this->view->render();
+        $response->setStatusCode(405);
+        return $response;
+    }
 }
