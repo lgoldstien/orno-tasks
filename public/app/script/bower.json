@@ -9,6 +9,7 @@
 		"bootstrap": null,
 		"less": null,
 		"font-awesome": null,
-		"bootswatch": null
+		"bootswatch": null,
+		"masonry": null
 	}
 }
