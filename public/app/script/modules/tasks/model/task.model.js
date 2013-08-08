@@ -2,8 +2,10 @@ define(function (require) {
 
     var Backbone        = require('backbone');
 
-    var TaskModel       = Backbone.Model.extend({});
-
-    return TaskModel;
+    return Backbone.Model.extend({
+        url: function () {
+            return "/api/task/" + this.attributes.task_id;
+        }
+    });
 
 });

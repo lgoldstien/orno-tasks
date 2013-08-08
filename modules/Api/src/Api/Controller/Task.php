@@ -56,7 +56,7 @@ class Task implements RestfulControllerInterface
     { 
         $this->taskid = $id;
         $this->taskModel->get($this->taskid);
-        $this->view['tasks'] = $this->taskModel->result;
+        $this->view['task'] = $this->taskModel->result;
 
         $response = $this->view->render();
         if ( $this->taskModel->result == false ) {
