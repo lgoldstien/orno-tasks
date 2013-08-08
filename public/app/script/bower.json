@@ -7,6 +7,8 @@
 		"underscore-amd": null,
 		"requirejs": null,
 		"bootstrap": null,
-		"less": null
+		"less": null,
+		"font-awesome": null,
+		"bootswatch": null
 	}
 }

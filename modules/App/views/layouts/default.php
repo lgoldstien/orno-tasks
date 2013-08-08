@@ -9,19 +9,23 @@
     <body>
         <header>
             <div class="navbar navbar-fixed-top">
-                <a class="navbar-brand" href="/">Tasks</a>
-                <ul class="nav navbar-nav hidden-sm">
-                    <li class="active"><a href="#viewCurrent">Current</a></li>
-                    <li><a href="#viewToday">Due Today</a></li>
-                    <li><a href="#viewComplete">Complete</a></li>
-                </ul>
+                <div class="container">
+                    <a class="navbar-brand" href="/">Tasks</a>
+                    <ul class="nav navbar-nav hidden-sm">
+                        <li class="active"><a href="#viewCurrent">Current</a></li>
+                        <li><a href="#viewToday">Due Today</a></li>
+                        <li><a href="#viewComplete">Complete</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav hidden-sm pull-right">
+                        <li><a class="close" href="#viewCurrent"><i class="icon-signout"></i></a></li>
+                    </ul>
+                </div>
             </div>
         </header>
-        <section>
-            <?= $this->region('content') ?>
-        </section>
+
+        <?= $this->region('content') ?>
         
-        <div class="container-fluid">
+        <div class="container">
             <div class="row">
                 <footer class="col-12">
                     <div class="navbar visible-sm">
@@ -29,6 +33,7 @@
                             <li class="active"><a href="#viewCurrent">Current</a></li>
                             <li><a href="#viewToday">Due Today</a></li>
                             <li><a href="#viewComplete">Complete</a></li>
+                            <li><a href="#viewCurrent"><i class="close icon-signout"></i> Signout</a></li>
                         </ul>
                     </div>
                 </footer>

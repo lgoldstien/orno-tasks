@@ -30,6 +30,9 @@
 @import "@{baseUrl}navs";
 @import "@{baseUrl}navbar";
 
+// Misc
+@import "@{baseUrl}labels";
+
 // Utility classes
 @import "@{baseUrl}utilities"; // Has to be last to override when necessary
 @import "@{baseUrl}responsive-utilities";
@@ -42,24 +45,24 @@
 @app-c-highlight:                  rgba(255,247,225,1);
 @app-c-bg:                         rgba(255,255,255,1);
 
-// Borders
-@border-radius-base:               8px;
+// // Borders
+// @border-radius-base:               8px;
 
-// Navbar
-@navbar-height:                    50px;
-@navbar-color:                     @app-c-font;
-@navbar-bg:                        @app-c-primary;
-@navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
-@navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
+// // Navbar
+// @navbar-height:                    50px;
+// @navbar-color:                     @app-c-font;
+// @navbar-bg:                        @app-c-primary;
+// @navbar-padding-horizontal:        floor(@grid-gutter-width / 2);  // ~15px
+// @navbar-padding-vertical:          ((@navbar-height - @line-height-computed) / 2);
 
-// Navbar links
-@navbar-link-color:                @app-c-font;
-@navbar-link-hover-color:          #333;
-@navbar-link-hover-bg:             @app-c-highlight;
-@navbar-link-active-color:         #555;
-@navbar-link-active-bg:            @app-c-secondary;
-@navbar-link-disabled-color:       #ccc;
-@navbar-link-disabled-bg:          transparent;
+// // Navbar links
+// @navbar-link-color:                @app-c-font;
+// @navbar-link-hover-color:          #333;
+// @navbar-link-hover-bg:             @app-c-highlight;
+// @navbar-link-active-color:         #555;
+// @navbar-link-active-bg:            @app-c-secondary;
+// @navbar-link-disabled-color:       #ccc;
+// @navbar-link-disabled-bg:          transparent;
 
 // Panels
 @panel-bg:                    @app-c-highlight;
@@ -67,3 +70,18 @@
 @panel-border-radius:         @border-radius-base;
 @panel-heading-bg:            @app-c-primary;
 @panel-footer-bg:             #f5f5f5;
+
+// Custom Styles 
+.panel {
+    box-shadow: 1px 2px 5px #555;
+    font-weight: bolder;
+    .close {
+        margin-right: 10px;
+    };
+    .span {
+        font-weight: bold;
+    };
+    a {
+        font-style: none;
+    };
+}
