@@ -1,14 +1,34 @@
 require.config({
-	baseUrl: "app/script",
+	baseUrl: "app/script/vendor/",
 	paths: {
-		"jquery": "vendor/jquery/jquery",
-		"underscore": "vendor/underscore-amd/underscore",
-		"backbone": "vendor/backbone-amd/backbone",
-		"bootstrap": "vendor/bootstrap/js",
-		"less": "vendor/less/dist/less-1.4.2"
-	}
+		"jquery": "jquery/jquery",
+		"underscore": "underscore-amd/underscore",
+		"backbone": "backbone-amd/backbone",
+		"bootstrap": "bootstrap/js",
+		"less": "less/dist/less-1.4.2",
+        "masonry": "masonry/masonry",
+        "tasks": "../modules/tasks"
+	},
+    deps: ['jquery'],
+    shim: {
+        "jquery": {
+            exports: "$"
+        },
+        "underscore": {
+            exports: "_"
+        },
+        "backbone": {
+            deps: ['jquery', 'underscore'],
+            exports: "Backbone"
+        },
+        "bootstrap/modal": {
+            deps: ['jquery']
+        },
+        "tasks/main": {
+            deps: ['backbone', 'bootstrap/modal', 'less'],
+            exports: "tasks"
+        }
+    }
 });
 
-require(['jquery', 'less', 'bootstrap/modal'], function () {
-	
-});
+require(['tasks/main']);
