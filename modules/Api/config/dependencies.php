@@ -20,7 +20,9 @@ return [
     'Orno\Db\Driver\Pdo' => [
         'arguments' => [
             [
-                'database' => 'sqlite:../data/db.sq3'
+                'database' => 'sqlite:../data/db.sq3',
+                'username' => '',
+                'password' => ''
             ]
         ]
     ]

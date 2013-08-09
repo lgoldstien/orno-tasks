@@ -5,7 +5,7 @@ define(function (require) {
 
     return Backbone.Model.extend({
         url: function () {
-            return "/api/task/" + this.attributes.task_id;
+            return "/api/task";
         },
         initialize: function () {
             var poller = Poller.get(this);

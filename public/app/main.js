@@ -4,6 +4,7 @@ require.config({
 		"jquery": "jquery/jquery",
 		"underscore": "underscore-amd/underscore",
 		"backbone": "backbone-amd/backbone",
+        "backbone-poller": "backbone-poller/backbone.poller",
 		"bootstrap": "bootstrap/js",
 		"less": "less/dist/less-1.4.2",
         "masonry": "masonry/masonry",

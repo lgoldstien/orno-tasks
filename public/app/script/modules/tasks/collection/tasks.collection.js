@@ -1,11 +1,11 @@
 define(function (require) {
 
     var Backbone        = require('backbone'),
-        Poller          = require('backbone-poller');
+    	Poller          = require('backbone-poller');
 
-    return Backbone.Model.extend({
+    return Backbone.Collection.extend({
         url: function () {
-            return "/api/task/" + this.attributes.task_id;
+            return "/api/task";
         },
         initialize: function () {
             var poller = Poller.get(this);

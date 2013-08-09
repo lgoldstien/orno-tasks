@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" id="task-list">
     
 </div>
 
@@ -6,31 +6,23 @@
 <div class="row">
     <div class="col-12">
         <div class="panel">
-            <button type="button" class="close" id="task-complete" data-taskid="<%= task.get('id') %>"><i class="icon-ok"></i></button>
-            <button type="button" class="close" id="task-view" data-taskid="<%= task.get('id') %>"><i class="icon-share-alt"></i></button>
-            <span><%= task.get('title') %></span>
+            <button type="button" class="close task-complete" data-taskid="<%= task.id %>"><i class="icon-ok"></i></button>
+            <button type="button" class="close task-view" data-taskid="<%= task.id %>"><i class="icon-share-alt"></i></button>
+            <span><%= task.title %></span>
         </div>
     </div>
 </div>
 </script>
-
-<!-- <div class="row">
+<script type="text/template" id="task-list-template">
+<% _.each(tasks, function (task) { %>
+<div class="row">
     <div class="col-12">
         <div class="panel">
-            <button type="button" class="close"><i class="icon-ok"></i></button>
-            <button type="button" class="close"><i class="icon-share-alt"></i></button>
-            <span>Task Title</span>
+            <button type="button" class="close task-complete" data-taskid="<%= task.id %>"><i class="icon-ok"></i></button>
+            <button type="button" class="close task-view" data-taskid="<%= task.id %>"><i class="icon-share-alt"></i></button>
+            <span><%= task.title %></span>
         </div>
     </div>
-</div> -->
-<!-- <div class="panel">
-    <div class="panel-heading">
-        <h3 class="panel-title">Task Title</h3>
-        <div class="pull-right">
-        	<a href="#"
-        </div>
-    </div>
-    <div class="panel-conent">
-        <p>Some random task that you will never actually get done!</p>
-    </div>
-</div> -->
+</div>
+<% }); %>
+</script>
