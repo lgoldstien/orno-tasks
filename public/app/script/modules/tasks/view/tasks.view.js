@@ -18,6 +18,19 @@ define(function (require) {
         render: function() {
             this.$el.html(this.template({ tasks: this.model.get('tasks') }));
             $('#task-list').html(this.$el.html());
+
+            $('.task-action-complete').click(function () {
+                return false;
+            });
+
+            $('.task-action-view').click(function () {
+                return false;
+            });
+
+            $('.task-action-save').click(function () {
+                return false;
+            });
+
             return this;
         }
     });

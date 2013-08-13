@@ -17,7 +17,9 @@ define(function (require) {
 
             this.$el.html(this.template({ task: this.model.get('task') }));
 
-            $('#task-list').html(this.$el.html());
+            $('#task-modal').html(this.$el.html());
+            
+            $('#task-modal').modal('show');
 
             return this;
         }
