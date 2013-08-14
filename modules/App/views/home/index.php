@@ -28,8 +28,8 @@
 <div class="row">
     <div class="col-12">
         <div class="panel">
-            <button type="button" class="close task-complete" data-taskid="<%= task.id %>"><i class="icon-ok"></i></button>
-            <button type="button" class="close task-view" data-taskid="<%= task.id %>"><i class="icon-share-alt"></i></button>
+            <button type="button" class="close task-action-complete" data-taskid="<%= task.id %>"><i class="icon-ok"></i></button>
+            <button type="button" class="close task-action-view" data-taskid="<%= task.id %>"><i class="icon-eye-open"></i></button>
             <span><%= task.title %></span>
         </div>
     </div>

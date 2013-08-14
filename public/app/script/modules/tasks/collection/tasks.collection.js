@@ -4,7 +4,7 @@ define(function (require) {
     	Poller          = require('backbone-poller');
 
     return Backbone.Collection.extend({
-        url: return "/api/task",
+        url: "/api/task",
         initialize: function () {
             var poller = Poller.get(this);
 
