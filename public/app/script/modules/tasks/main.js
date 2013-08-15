@@ -7,4 +7,6 @@ define(function (require) {
     var tasksModel      = new TasksModel();
     var tasksView       = new TasksView({ model: tasksModel });
 
+    var JQAge           = require('jquery-age');
+
 });

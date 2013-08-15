@@ -12,9 +12,10 @@
                 <div class="container">
                     <a class="navbar-brand" href="/">Tasks</a>
                     <ul class="nav navbar-nav hidden-sm">
-                        <li class="active"><a id="view_content">Current</a></li>
-                        <li><a id="view_content">Due Today</a></li>
-                        <li><a id="view_content">Complete</a></li>
+                        <li class="active"><a id="view-current">Current</a></li>
+                        <li><a id="view-due-today">Due Today</a></li>
+                        <li><a id="view-complete">Complete</a></li>
+                        <li><a id="new-task">New Task</a></li>
                     </ul>
                     <ul class="nav navbar-nav hidden-sm pull-right">
                         <li><a id="view_profile">Lawrence</a></li>
@@ -31,9 +32,10 @@
                 <footer class="col-12">
                     <div class="navbar visible-sm">
                         <ul class="nav navbar-nav">
-                            <li class="active"><a id="view_content">Current</a></li>
-                            <li><a id="view_content">Due Today</a></li>
-                            <li><a id="view_content">Complete</a></li>
+                            <li><a id="view-current">Current</a></li>
+                            <li><a id="view-due-today">Due Today</a></li>
+                            <li><a id="view-complete">Complete</a></li>
+                            <li><a id="new-task">New Task</a></li>
                             <li><a href="#viewCurrent"><i class="close icon-signout"></i> Signout</a></li>
                         </ul>
                     </div>

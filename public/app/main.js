@@ -8,12 +8,16 @@ require.config({
 		"bootstrap": "bootstrap/js",
 		"less": "less/dist/less-1.4.2",
         "masonry": "masonry/masonry",
-        "tasks": "../modules/tasks"
+        "tasks": "../modules/tasks",
+        "jquery-age": "../libs/jquery.age"
 	},
     deps: ['jquery'],
     shim: {
         "jquery": {
             exports: "$"
+        },
+        "jquery-age": {
+            deps: ['jquery']
         },
         "underscore": {
             exports: "_"

@@ -14,13 +14,12 @@ define(function (require) {
         },
 
         render: function() {
-            console.log('taskView:render', _.template($('#task-template').html()));
 
             this.$el.html(this.template({ task: this.model.get('task') }));
 
-            console.log('taskView:render', this.model.get('task'));
+            $('#task-view-modal').html(this.$el.html());
 
-            $('#task-modal').html(this.$el.html());
+            $('time').age();
             
             $('#task-action-save').click(function (arguments) {
                 console.log('Clicked Task Save');
@@ -28,7 +27,7 @@ define(function (require) {
                 return false;
             });
 
-            $('#task-modal').modal('show');
+            $('#task-view-modal').modal('show');
 
             return this;
         }

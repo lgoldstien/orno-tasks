@@ -26,10 +26,8 @@ define(function (require) {
                 var TaskID    = $(this).data("taskid");
 
                 var taskModel = new TaskModel({ id: TaskID });
-                console.log(taskModel);
 
                 var taskView  = new TaskView({ model: taskModel });
-                console.log(taskView);
 
                 return false;
             });
